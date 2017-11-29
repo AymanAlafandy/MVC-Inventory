@@ -3,7 +3,7 @@ namespace MVC_Inventory.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Init : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -18,6 +18,7 @@ namespace MVC_Inventory.Migrations
                         Shelf = c.String(),
                         Count = c.Int(nullable: false),
                         Description = c.String(),
+                        Old = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
