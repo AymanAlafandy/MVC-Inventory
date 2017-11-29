@@ -53,7 +53,7 @@ namespace MVC_Inventory.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Price,Category,Shelf,Count,Description")] Product product)
+        public ActionResult Create([Bind(Include = "Id,Name,Price,Category,Shelf,Count,Description")] Product product)   //this order should be same in create.html
         {
             if (ModelState.IsValid)
             {
