@@ -286,3 +286,6 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/MVC-Inventory/MVC-Inventory/Migrations/201711291059292_Init.cs
+/MVC-Inventory/MVC-Inventory/Migrations/201711291059292_Init.Designer.cs
+/MVC-Inventory/MVC-Inventory/Migrations/201711291059292_Init.resx
