@@ -3,11 +3,8 @@ namespace MVC_Inventory.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Init : DbMigration
+    public partial class Product : DbMigration
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public override void Up()
         {
             CreateTable(
@@ -24,10 +21,21 @@ namespace MVC_Inventory.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
+            CreateTable(
+                "dbo.ProductsOutOfStocks",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Description = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
         {
+            DropTable("dbo.ProductsOutOfStocks");
             DropTable("dbo.Products");
         }
     }

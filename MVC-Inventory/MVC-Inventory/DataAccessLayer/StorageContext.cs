@@ -15,5 +15,7 @@ namespace MVC_Inventory.DataAccessLayer
         { }
 
         public DbSet<Models.Product> Products { get; set; }       //DbSet: to set something in our database, the properity is used in the code to be use in the database.
+
+        public System.Data.Entity.DbSet<MVC_Inventory.Models.ViewModels.ProductsOutOfStock> ProductsOutOfStocks { get; set; }
     }                                                            //each DbSet will be one table
 }
