@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using MVC_Inventory.DataAccessLayer;
 using MVC_Inventory.Models;
+using MVC_Inventory.Models.ViewModels;
 
 namespace MVC_Inventory.Controllers
 {
@@ -19,6 +20,17 @@ namespace MVC_Inventory.Controllers
         public ActionResult Index()
         {
             return View(db.Products.ToList());
+        }
+
+        public ActionResult OutOfStock()
+        {
+
+            List<ProductsoutofStock> model = new List<ProductsoutofStock>();
+            foreach(var p in db.Products.Where(x=>x.Count<=0))
+            {
+                model.Add(new ProductsoutofStock(p));
+            }
+            return View(model);
         }
 
         public ActionResult Electronics()
