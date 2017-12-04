@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 namespace MVC_Inventory.Models.View_Models
 {
     public class ProductsOutOfStocks
@@ -18,7 +19,7 @@ namespace MVC_Inventory.Models.View_Models
     public ProductsOutOfStocks(Product product)
     {
         Id = product.Id;
-        Name= product.Name;
+        Name = product.Name;
         Description = product.Description;
 
     }

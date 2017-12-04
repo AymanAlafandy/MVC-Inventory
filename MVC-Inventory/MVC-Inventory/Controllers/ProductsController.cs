@@ -25,8 +25,8 @@ namespace MVC_Inventory.Controllers
         public ActionResult OutOfStocks()
         {
             List<ProductsOutOfstocks> model = new List<ProductsOutOfstocks>();
-            foreach(var p in db.Products.Where(x=>x.Count<=0))
-            return View(model);
+            foreach (var p in db.Products.Where(x => x.Count <= 0))
+                return View(model);
         }
         public ActionResult Electronics()
         {
